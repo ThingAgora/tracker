@@ -25,7 +25,18 @@ Relations are added to make the `slo` ontology derive from `geo` for compatibili
 		?x nie:url ?url; geo:location ?loc. ?loc geo:long ?long; geo:lat ?lat
 	}"
 
+### [owl](http://lov.okfn.org/dataset/lov/vocabs/owl)
+
+The OWL 2 Web Ontology Language, referenced by most of the Linked Open Vocabularies ontologies.
+
+#### Source files
+
+	50-owl.ontology
+
+
+
 References
 ----------
 
   * http://lov.okfn.org/dataset/lov/vocabs/geo
+  * http://lov.okfn.org/dataset/lov/vocabs/owl
