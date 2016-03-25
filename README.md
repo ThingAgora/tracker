@@ -84,6 +84,58 @@ Import the file with tracker.
 		?y rdfs:label ?ly
 	}"
 
+### [muo](http://idi.fundacionctic.org/muo/muo-vocab.html) and [ucum](http://idi.fundacionctic.org/muo/ucum-instances.html)
+
+These ontologies referenced in the [W3C Semantic Sensors Network examples](https://www.w3.org/2005/Incubator/ssn/wiki/Incubator_Report#Additional_examples) describe measurement units.
+
+#### Source files
+
+	56-muo.ontology
+	57-ucum.ontology
+	58-ucum-instances.ontology
+
+#### Sample model
+
+File `ultrasonicWifiTelemeterEnvironment.n3` describes the feature measured by the telemeter, i.e. the length of the space in front of it.
+
+	<uswt00frontspace> a ssn:FeatureOfInterest;
+		ssn:hasProperty <http://purl.oclc.org/NET/muo/ucum/physical-quality/length>.
+	
+	<uswt00> ssn:observes <http://purl.oclc.org/NET/muo/ucum/physical-quality/length>.
+
+File `ultrasonicWifiTelemeterObservation.n3` describes one measure instance, in meters.
+
+	<uswt00val01> a uomvocab:QualityValue;
+		uomvocab:measuredIn <http://purl.oclc.org/NET/muo/ucum/unit/length/meter>;
+		uomvocab:numericalValue 10.
+	
+	<uswt00out01> a ssn:SensorOutput;
+		ssn:hasValue <uswt00val01>.
+	
+	<uswt00observ01> a ssn:Observation;
+		ssn:observedBy <uswt00>;
+		ssn:observedProperty <http://purl.oclc.org/NET/muo/ucum/physical-quality/length>;
+		ssn:featureOfInterest <uswt00frontspace>;
+		ssn:observationResult <uswt00out01>.
+
+Import the files.
+
+	tracker-import ultrasonicWifiTelemeterEnvironment.n3 ultrasonicWifiTelemeterObservation.n3
+
+#### Sample query
+
+	tracker-sparql -q "SELECT ?sensor ?property ?feature ?value ?unit {
+		?s rdf:type ssn:Observation ;
+			ssn:observedBy ?sensor ;
+			ssn:observedProperty ?property ;
+			ssn:featureOfInterest ?feature ;
+			ssn:observationResult ?so .
+		?so ssn:hasValue ?ov .
+		?ov dul:hasRegionDataValue ?value ;
+			uomvocab:measuredIn ?unit . 
+	}"
+
+
 References
 ----------
 
@@ -91,3 +143,5 @@ References
   * http://lov.okfn.org/dataset/lov/vocabs/owl
   * http://lov.okfn.org/dataset/lov/vocabs/dul
   * http://lov.okfn.org/dataset/lov/vocabs/ssn
+  * http://idi.fundacionctic.org/muo/muo-vocab.html
+  * http://idi.fundacionctic.org/muo/ucum-instances.html

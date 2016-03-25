@@ -1,0 +1,130 @@
+@prefix ucum: <http://purl.oclc.org/NET/muo/ucum/> .
+@prefix localFun: <http://example.org/localFun> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix uomvocab: <http://purl.oclc.org/NET/muo/muo#> .
+@prefix tracker: <http://www.tracker-project.org/ontologies/tracker#> .
+
+<http://purl.oclc.org/NET/muo/ucum/> a owl:Ontology ;
+	dc:creator "Diego Berrueta and Luis Polo" ;
+	dc:date "2008-01-01T00:00:00" ;
+	dc:rights """(c) MyMobileWeb project, 2008
+      Based on the UCUM data (c) Gunther Schadow, Clement J. McDonald, 2005""" ;
+	rdfs:comment """The instances of this ontology have been automatically
+         generated from the UCUM (The Unified Code for Units of Measure).
+         See http://aurora.rg.iupui.edu/UCUM/ for more details
+         on UCUM. The members of the MyMobileWeb consortium
+         explicitly acknowledge the copyright of the data from
+         the UCUM ontology.""" ;
+	rdfs:label "Units of measurement ontology" ;
+	dc:source owl: ;
+	dc:contributor "Gunther Schadow, Clement J. McDonald" ;
+	owl:imports <http://purl.oclc.org/NET/muo/muo-vocab.owl> .
+
+<http://purl.oclc.org/NET/muo/muo-vocab.owl> a owl:Ontology .
+
+ucum: a tracker:Namespace, tracker:Ontology ;
+	tracker:prefix "ucum" .
+
+ucum:UnitOf-infotech a rdfs:Class ;
+	rdfs:subClassOf uomvocab:UnitOfMeasurement ;
+	rdfs:isDefinedBy <http://purl.oclc.org/NET/muo/ucum/> .
+
+ucum:UnitOf-misc a rdfs:Class ;
+	rdfs:subClassOf uomvocab:UnitOfMeasurement ;
+	rdfs:isDefinedBy <http://purl.oclc.org/NET/muo/ucum/> .
+
+ucum:UnitOf-levels a rdfs:Class ;
+	rdfs:subClassOf uomvocab:UnitOfMeasurement ;
+	rdfs:isDefinedBy <http://purl.oclc.org/NET/muo/ucum/> .
+
+ucum:UnitOf-chemical a rdfs:Class ;
+	rdfs:subClassOf uomvocab:UnitOfMeasurement ;
+	rdfs:isDefinedBy <http://purl.oclc.org/NET/muo/ucum/> .
+
+ucum:UnitOf-clinical a rdfs:Class ;
+	rdfs:subClassOf uomvocab:UnitOfMeasurement ;
+	rdfs:isDefinedBy <http://purl.oclc.org/NET/muo/ucum/> .
+
+ucum:UnitOf-us-volumes a rdfs:Class ;
+	rdfs:subClassOf uomvocab:UnitOfMeasurement ;
+	rdfs:isDefinedBy <http://purl.oclc.org/NET/muo/ucum/> .
+
+ucum:UnitOf-us-lengths a rdfs:Class ;
+	rdfs:subClassOf uomvocab:UnitOfMeasurement ;
+	rdfs:isDefinedBy <http://purl.oclc.org/NET/muo/ucum/> .
+
+ucum:UnitOf-typeset a rdfs:Class ;
+	rdfs:subClassOf uomvocab:UnitOfMeasurement ;
+	rdfs:isDefinedBy <http://purl.oclc.org/NET/muo/ucum/> .
+
+ucum:UnitOf-troy a rdfs:Class ;
+	rdfs:subClassOf uomvocab:UnitOfMeasurement ;
+	rdfs:isDefinedBy <http://purl.oclc.org/NET/muo/ucum/> .
+
+ucum:UnitOf-si a rdfs:Class ;
+	rdfs:subClassOf uomvocab:UnitOfMeasurement ;
+	rdfs:isDefinedBy <http://purl.oclc.org/NET/muo/ucum/> .
+
+ucum:UnitOf-iso1000 a rdfs:Class ;
+	rdfs:subClassOf uomvocab:UnitOfMeasurement ;
+	rdfs:isDefinedBy <http://purl.oclc.org/NET/muo/ucum/> .
+
+ucum:UnitOf-intcust a rdfs:Class ;
+	rdfs:subClassOf uomvocab:UnitOfMeasurement ;
+	rdfs:isDefinedBy <http://purl.oclc.org/NET/muo/ucum/> .
+
+ucum:UnitOf-heat a rdfs:Class ;
+	rdfs:subClassOf uomvocab:UnitOfMeasurement ;
+	rdfs:isDefinedBy <http://purl.oclc.org/NET/muo/ucum/> .
+
+ucum:UnitOf-dimless a rdfs:Class ;
+	rdfs:subClassOf uomvocab:UnitOfMeasurement ;
+	rdfs:isDefinedBy <http://purl.oclc.org/NET/muo/ucum/> .
+
+ucum:UnitOf-const a rdfs:Class ;
+	rdfs:subClassOf uomvocab:UnitOfMeasurement ;
+	rdfs:isDefinedBy <http://purl.oclc.org/NET/muo/ucum/> .
+
+ucum:UnitOf-cgs a rdfs:Class ;
+	rdfs:subClassOf uomvocab:UnitOfMeasurement ;
+	rdfs:isDefinedBy <http://purl.oclc.org/NET/muo/ucum/> .
+
+ucum:UnitOf-brit-volumes a rdfs:Class ;
+	rdfs:subClassOf uomvocab:UnitOfMeasurement ;
+	rdfs:isDefinedBy <http://purl.oclc.org/NET/muo/ucum/> .
+
+ucum:UnitOf-brit-length a rdfs:Class ;
+	rdfs:subClassOf uomvocab:UnitOfMeasurement ;
+	rdfs:isDefinedBy <http://purl.oclc.org/NET/muo/ucum/> .
+
+ucum:UnitOf-avoirdupois a rdfs:Class ;
+	rdfs:subClassOf uomvocab:UnitOfMeasurement ;
+	rdfs:isDefinedBy <http://purl.oclc.org/NET/muo/ucum/> .
+
+ucum:UnitOf-apoth a rdfs:Class ;
+	rdfs:subClassOf uomvocab:UnitOfMeasurement ;
+	rdfs:isDefinedBy <http://purl.oclc.org/NET/muo/ucum/> .
+
+ucum:code1 a rdf:Property , owl:FunctionalProperty ;
+    rdfs:domain  rdfs:Resource ;
+    rdfs:range   xsd:string .
+
+ucum:code2 a rdf:Property , owl:FunctionalProperty ;
+    rdfs:domain  rdfs:Resource ;
+    rdfs:range   xsd:string .
+
+dc:date a rdf:Property .
+
+dc:source a rdf:Property .
+
+dc:contributor a rdf:Property .
+
+dc:creator a rdf:Property .
+
+dc:rights a rdf:Property .
+
+
