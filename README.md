@@ -33,6 +33,15 @@ The OWL 2 Web Ontology Language, referenced by most of the Linked Open Vocabular
 
 	50-owl.ontology
 
+### [dul](http://lov.okfn.org/dataset/lov/vocabs/dul)
+
+The DOLCE+DnS Ultralite ontology. Foundational ontology for modeling either physical or social contexts.
+Parent for most classes and properties of the ssn ontology.
+
+#### Source files
+
+	52-dul-classes.ontology
+	53-dul-properties.ontology
 
 
 References
@@ -40,3 +49,4 @@ References
 
   * http://lov.okfn.org/dataset/lov/vocabs/geo
   * http://lov.okfn.org/dataset/lov/vocabs/owl
+  * http://lov.okfn.org/dataset/lov/vocabs/dul
